@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a; /* page background */
+  --color-surface: #141414; /* navbar / card background */
+  --color-surface-2: #1e1e1e; /* specs panel, tabs */
+  --color-border: #2a2a2a;
+  --color-accent: #ccff00; /* lime-green accent */
+  --color-muted: #9a9a9a; /* secondary text */
+
+  --font-display: var(--font-oswald); /* headings, uppercase display text */
+  --font-sans: var(--font-inter); /* body text */
+}
+
+body {
+  background-color: var(--color-background);
+  color: #f5f5f5;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}

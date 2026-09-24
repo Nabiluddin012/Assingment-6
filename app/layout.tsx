@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -26,8 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} ${inter.variable} font-sans`}>
-        {children}
+      <body
+        className={`${oswald.variable} ${inter.variable} flex min-h-screen flex-col font-sans`}
+      >
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
